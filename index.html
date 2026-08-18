@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社会心理学の授業資料</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --primary-hover: #1d4ed8;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --pdf-red: #dc2626;
+      --form-purple: #7c3aed;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 35px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+    h1 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    .chapter-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      font-size: 19px;
+      color: var(--primary);
+      border-left: 4px solid #3b82f6;
+      padding-left: 12px;
+      margin-bottom: 18px;
+    }
+    .link-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .btn-link {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14.5px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-link:hover {
+      border-color: #3b82f6;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+    }
+    .btn-link.quiz-link:hover {
+      border-color: #8b5cf6;
+      background-color: #f5f3ff;
+      color: #6d28d9;
+      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.15);
+    }
+    .badge-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 4px 7px;
+      border-radius: 4px;
+      margin-right: 12px;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .pdf-badge {
+      background-color: #fee2e2;
+      color: var(--pdf-red);
+    }
+    .quiz-badge {
+      background-color: #ede9fe;
+      color: var(--form-purple);
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>社会心理学の授業資料</h1>
+      <div class="subtitle">講義スライド・課題・理解度クイズ ポータル</div>
+    </header>
+
+    <main>
+      <!-- 第1回 序章 -->
+      <section class="chapter-card">
+        <h2>第1回　序章：メディアの社会心理学へようこそ</h2>
+        <div class="link-list">
+          <a href="00_序章_slides.pdf" class="btn-link" target="_blank">
+            <span class="badge-icon pdf-badge">PDF</span>
+            <span>講義スライド (slides.pdf)</span>
+          </a>
+          <a href="00_序章_記述式課題.pdf" class="btn-link" target="_blank">
+            <span class="badge-icon pdf-badge">PDF</span>
+            <span>記述式課題 (記述式課題.pdf)</span>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSel18mmsPF78aOK2iKFtdmLTThnOxIOi7WrEVdrW8IVZ5wv7g/viewform?usp=dialog" class="btn-link quiz-link" target="_blank" rel="noopener noreferrer">
+            <span class="badge-icon quiz-badge">QUIZ</span>
+            <span>理解度クイズ (Google Form)</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 第2回 第1章 -->
+      <section class="chapter-card">
+        <h2>第2回　第1章：選択的接触の実態とその社会心理</h2>
+        <div class="link-list">
+          <a href="01_第1章_slides.pdf" class="btn-link" target="_blank">
+            <span class="badge-icon pdf-badge">PDF</span>
+            <span>講義スライド (slides.pdf)</span>
+          </a>
+          <a href="01_第1章_記述式課題.pdf" class="btn-link" target="_blank">
+            <span class="badge-icon pdf-badge">PDF</span>
+            <span>記述式課題 (記述式課題.pdf)</span>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-uZhlhx-hdgNxWe66lbLoysq4ARLarjYq6uTnf8UWzCQuNQ/viewform?usp=dialog" class="btn-link quiz-link" target="_blank" rel="noopener noreferrer">
+            <span class="badge-icon quiz-badge">QUIZ</span>
+            <span>理解度クイズ (Google Form)</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 社会心理学 授業資料ポータル
+    </footer>
+  </div>
+</body>
+</html>
