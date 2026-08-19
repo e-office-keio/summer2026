@@ -15,8 +15,7 @@
       --card-bg: #ffffff;
       --border: #e2e8f0;
       --pdf-red: #dc2626;
-      --form-green: #059669;
-      --form-purple: #7c3aed;
+      --quiz-purple: #7c3aed;
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +27,7 @@
       padding: 40px 20px;
     }
     .container {
-      max-width: 1040px;
+      max-width: 920px;
       margin: 0 auto;
     }
     header {
@@ -42,6 +41,7 @@
       color: var(--primary);
       margin-bottom: 8px;
       font-weight: bold;
+      letter-spacing: 0.5px;
     }
     .subtitle {
       font-size: 15px;
@@ -51,21 +51,25 @@
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 24px 28px;
-      margin-bottom: 24px;
+      padding: 22px 28px;
+      margin-bottom: 20px;
       box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .chapter-card:hover {
+      box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.08);
     }
     h2 {
-      font-size: 19px;
+      font-size: 18px;
       color: var(--primary);
       border-left: 4px solid #3b82f6;
       padding-left: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .link-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
     }
     .btn-link {
       display: flex;
@@ -73,10 +77,10 @@
       background-color: #ffffff;
       border: 1.5px solid #cbd5e1;
       border-radius: 8px;
-      padding: 12px 14px;
+      padding: 13px 16px;
       text-decoration: none;
       color: var(--text);
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 600;
       transition: all 0.2s ease;
     }
@@ -86,12 +90,6 @@
       color: var(--primary);
       transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
-    }
-    .btn-link.form-link:hover {
-      border-color: #10b981;
-      background-color: #ecfdf5;
-      color: #047857;
-      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.15);
     }
     .btn-link.quiz-link:hover {
       border-color: #8b5cf6;
@@ -103,11 +101,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: bold;
-      padding: 3px 6px;
+      padding: 3px 7px;
       border-radius: 4px;
-      margin-right: 10px;
+      margin-right: 12px;
       letter-spacing: 0.5px;
       flex-shrink: 0;
     }
@@ -115,19 +113,17 @@
       background-color: #fee2e2;
       color: var(--pdf-red);
     }
-    .form-badge {
-      background-color: #d1fae5;
-      color: var(--form-green);
-    }
     .quiz-badge {
       background-color: #ede9fe;
-      color: var(--form-purple);
+      color: var(--quiz-purple);
     }
     footer {
       text-align: center;
       font-size: 13px;
       color: var(--text-muted);
       margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
@@ -135,7 +131,7 @@
   <div class="container">
     <header>
       <h1>社会心理学の授業資料</h1>
-      <div class="subtitle">講義スライド・記述式課題・理解度クイズ ポータル</div>
+      <div class="subtitle">講義スライド・理解度クイズ ポータル</div>
     </header>
 
     <main>
@@ -146,14 +142,6 @@
           <a href="00_序章_slides.pdf" class="btn-link" target="_blank">
             <span class="badge-icon pdf-badge">PDF</span>
             <span>講義スライド</span>
-          </a>
-          <a href="00_序章_記述式課題.pdf" class="btn-link" target="_blank">
-            <span class="badge-icon pdf-badge">PDF</span>
-            <span>記述式課題 (閲覧用)</span>
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSejD9bZD01pQJCqXxqE0pYwATxd-XDLKKp1GzmZp8PfUupb7A/viewform" class="btn-link form-link" target="_blank" rel="noopener noreferrer">
-            <span class="badge-icon form-badge">FORM</span>
-            <span>記述式課題 (回答フォーム)</span>
           </a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSel18mmsPF78aOK2iKFtdmLTThnOxIOi7WrEVdrW8IVZ5wv7g/viewform?usp=dialog" class="btn-link quiz-link" target="_blank" rel="noopener noreferrer">
             <span class="badge-icon quiz-badge">QUIZ</span>
@@ -170,15 +158,37 @@
             <span class="badge-icon pdf-badge">PDF</span>
             <span>講義スライド</span>
           </a>
-          <a href="01_第1章_記述式課題.pdf" class="btn-link" target="_blank">
-            <span class="badge-icon pdf-badge">PDF</span>
-            <span>記述式課題 (閲覧用)</span>
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2jSgeOdYHr5TgtTCngujap7td8ULvxPUNrdG-KZVoDTQ4gw/viewform" class="btn-link form-link" target="_blank" rel="noopener noreferrer">
-            <span class="badge-icon form-badge">FORM</span>
-            <span>記述式課題 (回答フォーム)</span>
-          </a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-uZhlhx-hdgNxWe66lbLoysq4ARLarjYq6uTnf8UWzCQuNQ/viewform?usp=dialog" class="btn-link quiz-link" target="_blank" rel="noopener noreferrer">
+            <span class="badge-icon quiz-badge">QUIZ</span>
+            <span>理解度クイズ (Google Form)</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 第3回 第2章 -->
+      <section class="chapter-card">
+        <h2>第3回　第2章：選択的接触の社会的帰結</h2>
+        <div class="link-list">
+          <a href="02_第2章_slides.pdf" class="btn-link" target="_blank">
+            <span class="badge-icon pdf-badge">PDF</span>
+            <span>講義スライド</span>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRQ0_6TB3U9pEyfDv58PPBPIgKOSVesy6qetWg0Q5mG716-w/viewform?usp=sharing&ouid=106936251433553625999" class="btn-link quiz-link" target="_blank" rel="noopener noreferrer">
+            <span class="badge-icon quiz-badge">QUIZ</span>
+            <span>理解度クイズ (Google Form)</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 第4回 第3章 -->
+      <section class="chapter-card">
+        <h2>第4回　第3章：ニュース認知の歪みとメディア不信</h2>
+        <div class="link-list">
+          <a href="03_第3章_slides.pdf" class="btn-link" target="_blank">
+            <span class="badge-icon pdf-badge">PDF</span>
+            <span>講義スライド</span>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIImmgujxpFCmuEvgyr2U1CEhz48MWrH7PCJH36dg2FXCxOA/viewform?usp=sharing&ouid=106936251433553625999" class="btn-link quiz-link" target="_blank" rel="noopener noreferrer">
             <span class="badge-icon quiz-badge">QUIZ</span>
             <span>理解度クイズ (Google Form)</span>
           </a>
